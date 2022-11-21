@@ -1,0 +1,68 @@
+Common subdirectories: linux-6.0.9/arch and linux-6.0.9_2/arch
+Common subdirectories: linux-6.0.9/block and linux-6.0.9_2/block
+Common subdirectories: linux-6.0.9/certs and linux-6.0.9_2/certs
+Only in linux-6.0.9_2: .config
+Common subdirectories: linux-6.0.9/crypto and linux-6.0.9_2/crypto
+Common subdirectories: linux-6.0.9/Documentation and linux-6.0.9_2/Documentation
+Common subdirectories: linux-6.0.9/drivers and linux-6.0.9_2/drivers
+Common subdirectories: linux-6.0.9/fs and linux-6.0.9_2/fs
+Only in linux-6.0.9_2: hello_syscall
+Common subdirectories: linux-6.0.9/include and linux-6.0.9_2/include
+Common subdirectories: linux-6.0.9/init and linux-6.0.9_2/init
+Common subdirectories: linux-6.0.9/io_uring and linux-6.0.9_2/io_uring
+Common subdirectories: linux-6.0.9/ipc and linux-6.0.9_2/ipc
+Common subdirectories: linux-6.0.9/kernel and linux-6.0.9_2/kernel
+Common subdirectories: linux-6.0.9/lib and linux-6.0.9_2/lib
+Common subdirectories: linux-6.0.9/LICENSES and linux-6.0.9_2/LICENSES
+diff -u linux-6.0.9/Makefile linux-6.0.9_2/Makefile
+--- linux-6.0.9/Makefile	2022-11-16 14:34:15.000000000 +0530
++++ linux-6.0.9_2/Makefile	2022-11-21 02:27:49.431968597 +0530
+@@ -1101,7 +1101,7 @@
+ export MODULES_NSDEPS := $(extmod_prefix)modules.nsdeps
+ 
+ ifeq ($(KBUILD_EXTMOD),)
+-core-y			+= kernel/ certs/ mm/ fs/ ipc/ security/ crypto/
++core-y			+= kernel/ certs/ mm/ fs/ ipc/ security/ crypto/ hello_syscall/
+ core-$(CONFIG_BLOCK)	+= block/
+ core-$(CONFIG_IO_URING)	+= io_uring/
+ 
+Only in linux-6.0.9_2: .missing-syscalls.d
+Common subdirectories: linux-6.0.9/mm and linux-6.0.9_2/mm
+Only in linux-6.0.9_2: modules.builtin
+Only in linux-6.0.9_2: modules.builtin.modinfo
+Only in linux-6.0.9_2: modules-only.symvers
+Only in linux-6.0.9_2: .modules-only.symvers.cmd
+Only in linux-6.0.9_2: modules.order
+Only in linux-6.0.9_2: .modules.order.cmd
+Only in linux-6.0.9_2: Module.symvers
+Only in linux-6.0.9_2: .Module.symvers.cmd
+Common subdirectories: linux-6.0.9/net and linux-6.0.9_2/net
+Common subdirectories: linux-6.0.9/samples and linux-6.0.9_2/samples
+Common subdirectories: linux-6.0.9/scripts and linux-6.0.9_2/scripts
+Common subdirectories: linux-6.0.9/security and linux-6.0.9_2/security
+Common subdirectories: linux-6.0.9/sound and linux-6.0.9_2/sound
+Only in linux-6.0.9_2: System.map
+Only in linux-6.0.9_2: .tmp_System.map
+Only in linux-6.0.9_2: .tmp_vmlinux.kallsyms1
+Only in linux-6.0.9_2: .tmp_vmlinux.kallsyms1.map
+Only in linux-6.0.9_2: .tmp_vmlinux.kallsyms1.o
+Only in linux-6.0.9_2: .tmp_vmlinux.kallsyms1.S
+Only in linux-6.0.9_2: .tmp_vmlinux.kallsyms2
+Only in linux-6.0.9_2: .tmp_vmlinux.kallsyms2.map
+Only in linux-6.0.9_2: .tmp_vmlinux.kallsyms2.o
+Only in linux-6.0.9_2: .tmp_vmlinux.kallsyms2.S
+Common subdirectories: linux-6.0.9/tools and linux-6.0.9_2/tools
+Common subdirectories: linux-6.0.9/usr and linux-6.0.9_2/usr
+Only in linux-6.0.9_2: .version
+Common subdirectories: linux-6.0.9/virt and linux-6.0.9_2/virt
+Only in linux-6.0.9_2: vmlinux
+Only in linux-6.0.9_2: .vmlinux.cmd
+Only in linux-6.0.9_2: .vmlinux.export.c
+Only in linux-6.0.9_2: .vmlinux.export.o
+Only in linux-6.0.9_2: ..vmlinux.export.o.cmd
+Only in linux-6.0.9_2: vmlinux-gdb.py
+Only in linux-6.0.9_2: vmlinux.map
+Only in linux-6.0.9_2: vmlinux.o
+Only in linux-6.0.9_2: .vmlinux.objs
+Only in linux-6.0.9_2: .vmlinux.o.cmd
+Only in linux-6.0.9_2: vmlinux.symvers
